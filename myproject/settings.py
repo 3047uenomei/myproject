@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 from django.conf.global_settings import STATIC_ROOT
 
