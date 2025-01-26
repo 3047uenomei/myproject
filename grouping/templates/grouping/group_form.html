@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>グループ分け</title>
+</head>
+<body>
+    <h1>グループ分け</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit">グループ分け</button>
+    </form>
+
+    {% if groups %}
+    <h2>結果</h2>
+    <ul>
+        {% for group in groups %}
+        <li>
+            グループ{{ group.group_number }}: 日本人{{ group.japanese }}人、外国人{{ group.foreigners }}人、色:{{ group.color }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>

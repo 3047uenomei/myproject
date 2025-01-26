@@ -1,0 +1,19 @@
+# 仮想環境を無視
+venv/
+.env/
+
+# IDEの設定ファイルを無視
+.idea/
+.vscode/
+
+# Python関連のキャッシュを無視
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ログファイルを無視
+*.log
+
+# その他、不要なファイルを無視
+*.sqlite3
